@@ -43,10 +43,10 @@ function CreatePosts({ addNewPost }) {
   return (
     <>
       <div className="justify-content-center m-2">
-        <div className="d-flex m-1 float-end">
-          <NavLink to={"/getPosts"} className="btn btn-primary btn-sm m-2">
-            View Posts
-          </NavLink>
+      <div className="d-flex m-1 float-end">
+        <NavLink to={"/getPosts"} className="btn btn-secondary btn-sm m-2">
+          View Posts
+        </NavLink>
         </div>
         <div className="row justify-content-center m-5">
           <Formik

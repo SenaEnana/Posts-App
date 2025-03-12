@@ -50,8 +50,10 @@ const PostDetail = () => {
   }
   return (
     <>
+      <div className="justify-content-center m-2">
+        <p className="text-dark m-3 fs-5 fw-bold">Post Detail</p>
+      </div>
       <div className="card m-3 w-50 shadow-lg">
-      <p className="text-dark m-3 fs-5 fw-bold">Post Detail</p>
         <div className="card-header">
           <h5 className="text-center uppercase">{post.title}</h5>
         </div>

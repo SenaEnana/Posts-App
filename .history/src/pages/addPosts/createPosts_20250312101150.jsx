@@ -43,7 +43,7 @@ function CreatePosts({ addNewPost }) {
   return (
     <>
       <div className="justify-content-center m-2">
-        <div className="d-flex m-1 float-end">
+        <div className="d-flex m-1">
           <NavLink to={"/getPosts"} className="btn btn-primary btn-sm m-2">
             View Posts
           </NavLink>

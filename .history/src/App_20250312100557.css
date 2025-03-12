@@ -5,6 +5,9 @@
   text-align: center;
 }
 body {
+  margin: 0;
+  display: flex;
+  place-items: center;
   background-color: #f1e7e7;
 }
 .logo {

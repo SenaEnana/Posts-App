@@ -50,42 +50,46 @@ const PostDetail = () => {
   }
   return (
     <>
-      <div className="card m-3 w-50 shadow-lg">
-      <p className="text-dark m-3 fs-5 fw-bold">Post Detail</p>
-        <div className="card-header">
-          <h5 className="text-center uppercase">{post.title}</h5>
+      <div className="justify-content-center m-2">
+        <div className="text-center">
+          <p className="text-dark m-3 fs-5 fw-bold">Post Detail</p>
         </div>
-        <div className="card-body">
-          <div className="row">
-            <div className="col-md-6">
-              <p>
-                <strong>Post Id :</strong> {post.id}
-              </p>
-              <p>
-                <strong>User :</strong> {post.userId}
-              </p>
-              <p>
-                <strong>Body :</strong> {post.body}
-              </p>
-            </div>
+        <div className="card m-3 w-50 shadow-lg">
+          <div className="card-header">
+            <h5 className="text-center uppercase">{post.title}</h5>
           </div>
-          <div className="float-end">
-            <button
-              onClick={() => deleteOperation(post.id)}
-              className="btn btn-outline-danger float end m-2 p-1 btn-sm"
-              type="button"
-            >
-              Delete
-            </button>
-            <Link to={`/updatePost/${post.id}`}>
-              <button className="btn btn-outline-info btn-sm">Edit</button>
-            </Link>
-            <button
-              className="btn btn-primary m-1 p-1 btn-sm"
-              onClick={() => navigate("/getPosts")}
-            >
-              Back
-            </button>
+          <div className="card-body">
+            <div className="row">
+              <div className="col-md-6">
+                <p>
+                  <strong>Post Id :</strong> {post.id}
+                </p>
+                <p>
+                  <strong>User :</strong> {post.userId}
+                </p>
+                <p>
+                  <strong>Body :</strong> {post.body}
+                </p>
+              </div>
+            </div>
+            <div className="float-end">
+              <button
+                onClick={() => deleteOperation(post.id)}
+                className="btn btn-outline-danger float end m-2 p-1 btn-sm"
+                type="button"
+              >
+                Delete
+              </button>
+              <Link to={`/updatePost/${post.id}`}>
+                <button className="btn btn-outline-info btn-sm">Edit</button>
+              </Link>
+              <button
+                className="btn btn-primary m-1 p-1 btn-sm"
+                onClick={() => navigate("/getPosts")}
+              >
+                Back
+              </button>
+            </div>
           </div>
         </div>
       </div>
