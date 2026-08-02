@@ -84,7 +84,7 @@ Open the provided local staging server link (typically http://localhost:4173) in
 ├── src/
 │   ├── components/
 │   │   ├── TextInput.jsx   # Controlled input wrapper
-│   │   └── Header.jsx      # Sticky layout separation header
+│   │   └── Navbar.jsx      # Sticky layout separation navbar
 │   ├── pages/
 │   │   ├── Home.jsx         # Isolated layout landing view
 │   │   ├── CreatePost.jsx   # Entry intake panel
