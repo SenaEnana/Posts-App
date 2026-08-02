@@ -24,3 +24,10 @@ PostSpace is a modern, high-performance Progressive Web Application (PWA) design
 *   **Mock Endpoint API:** JSONPlaceholder REST Pipeline
 
 ---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
+
