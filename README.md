@@ -6,11 +6,10 @@ PostSpace is a modern, high-performance Progressive Web Application (PWA) design
 
 ## 🎯 Project Goals
 
-*   **Improve report accessibility:** Deliver instant access to application data streams from any device framework.
-*   **Simplify merchant and branch management:** Provide a clean, componentized dashboard workflow to streamline resource tracking.
-*   **Provide quick information into POS performance:** Maintain visual clarity at a glance across active system feeds.
-*   **Reduce manual reporting processes:** Automate state operations and background caching sequences smoothly.
-
+*   **Master Progressive Web App Architecture:** Gain deep, hands-on experience with modern PWA capabilities, including service workers, runtime caching strategies, dynamic install lifecycles, and application manifests.
+*   **Create a Reusable PWA Blueprint:** Build a clean, modular, and production-ready skeleton codebase that can be easily repurposed for future offline-first React applications.
+*   **Implement Secure Offline Capabilities:** Move away from standard, high-risk client-side caching habits and master safe, sandboxed background interception via Workbox.
+*   **Modern Styling Infrastructure:** Practice setting up fluid, native-feeling mobile components using Tailwind CSS v4's high-performance compilation engine.
 ---
 
 ## ✨ Features
