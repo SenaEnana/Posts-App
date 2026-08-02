@@ -69,3 +69,33 @@ To accurately test the download banner installations, network disconnections, an
 npm run build
 npm run preview
 ```
+
+Open the provided local staging server link (typically http://localhost:4173) in your browser to inspect full PWA interactions.
+
+---
+
+## 📂 Project Architecture
+
+```
+├── public/
+│   ├── favicon.ico
+│   ├── pwa-192x192.png     # Mobile platform icon asset
+│   └── pwa-512x512.png     # Large tablet splash graphic
+├── src/
+│   ├── components/
+│   │   ├── TextInput.jsx   # Controlled input wrapper
+│   │   └── Header.jsx      # Sticky layout separation header
+│   ├── pages/
+│   │   ├── Home.jsx         # Isolated layout landing view
+│   │   ├── CreatePost.jsx   # Entry intake panel
+│   │   ├── GetPosts.jsx     # Main feed viewer list
+│   │   ├── PostDetail.jsx   # Record review panel 
+│   │   └── UpdatePost.jsx   # Formik put-request editor
+│   ├── App.jsx             # Unified state-broker data hub
+│   ├── installPWA.jsx      # Memory-safe install prompter
+│   ├── index.css           # Tailwind v4 layer imports
+│   └── main.jsx            # React root container setup
+├── vite.config.js          # Workbox caching rule configurations
+└── package.json
+```
+
