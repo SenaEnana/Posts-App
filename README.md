@@ -46,3 +46,15 @@ npm install
 
 * public/pwa-192x192.png (Standard App Launcher Icon)
 * public/pwa-512x512.png (Splash Screen & Adaptive Maskable Graphic)
+
+---
+
+## ⚙️ Development vs. Production Compilation
+
+Running Locally (Development Mode)
+
+To spin up the development environment workspace server:
+
+```bash
+npm run dev
+```
