@@ -37,3 +37,9 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
    ```bash
    git clone [https://github.com/SenaEnana/Posts-App.git](https://github.com/SenaEnana/Posts-App.git)
    cd postspace
+```
+
+2. Install the production and design dependencies:
+```bash
+npm install
+```
