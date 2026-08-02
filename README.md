@@ -35,5 +35,5 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
 
 1. Clone the project repository code:
    ```bash
-   git clone [https://github.com/your-username/postspace.git](https://github.com/your-username/postspace.git)
+   git clone [https://github.com/SenaEnana/Posts-App.git](https://github.com/SenaEnana/Posts-App.git)
    cd postspace
