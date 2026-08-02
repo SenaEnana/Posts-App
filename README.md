@@ -61,4 +61,8 @@ npm run dev
 
 *💡 Note: The background service worker layer remains disabled during local dev compilation to avoid servicing stale UI code while you make styling updates.
 
+## Simulating the full PWA Capabilities (Production Preview)
+ 
+To accurately test the download banner installations, network disconnections, and offline runtime data retrieval caching rules:
+
 
