@@ -13,3 +13,14 @@ PostSpace is a modern, high-performance Progressive Web Application (PWA) design
 *   **🛠️ Resilient CRUD Controls:** Create, Read, Update, and Delete actions synchronize seamlessly through a unified structural data stream pipeline.
 
 ---
+
+## 🛠️ Tech Stack & Dependencies
+
+*   **Frontend Framework:** React 18+ (Vite Bundler Archetype)
+*   **Styling Engine:** Tailwind CSS v4
+*   **Routing Architecture:** React Router DOM v6
+*   **Form Management:** Formik
+*   **PWA Core Configuration:** `vite-plugin-pwa` (Workbox Engine)
+*   **Mock Endpoint API:** JSONPlaceholder REST Pipeline
+
+---
