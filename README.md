@@ -38,8 +38,11 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
    git clone [https://github.com/SenaEnana/Posts-App.git](https://github.com/SenaEnana/Posts-App.git)
    cd postspace
 ```
-
 2. Install the production and design dependencies:
 ```bash
 npm install
 ```
+3. Ensure PWA graphic icons are placed correctly inside the public folder:
+
+* public/pwa-192x192.png (Standard App Launcher Icon)
+* public/pwa-512x512.png (Splash Screen & Adaptive Maskable Graphic)
