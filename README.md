@@ -99,3 +99,10 @@ Open the provided local staging server link (typically http://localhost:4173) in
 └── package.json
 ```
 
+---
+
+## 🔒 Security & Data Caching Strategy
+
+*This application deliberately avoids localStorage for primary API data caches due to XSS vulnerabilities. Instead, it utilizes Workbox Runtime Caching:
+
+
