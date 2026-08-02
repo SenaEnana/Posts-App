@@ -105,4 +105,10 @@ Open the provided local staging server link (typically http://localhost:4173) in
 
 *This application deliberately avoids localStorage for primary API data caches due to XSS vulnerabilities. Instead, it utilizes Workbox Runtime Caching:
 
+* Strategy: NetworkFirst
+* Intercept Pattern: Target matches
+```bash
+/^https:\/\/jsonplaceholder\.typicode\.com\/posts.*/
+```
+* Behavior: The Service Worker dynamically hooks fetch calls. If internet access is drops out unexpectedly, the background service worker securely intercepts the network failure and immediately populates the React application engine using local sandboxed CacheStorage copies.
 
