@@ -31,3 +31,9 @@ PostSpace is a modern, high-performance Progressive Web Application (PWA) design
 
 Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
 
+### Installation
+
+1. Clone the project repository code:
+   ```bash
+   git clone [https://github.com/your-username/postspace.git](https://github.com/your-username/postspace.git)
+   cd postspace
