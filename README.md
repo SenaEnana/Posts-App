@@ -65,4 +65,7 @@ npm run dev
  
 To accurately test the download banner installations, network disconnections, and offline runtime data retrieval caching rules:
 
-
+```bash
+npm run build
+npm run preview
+```
