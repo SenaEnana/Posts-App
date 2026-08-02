@@ -58,3 +58,7 @@ To spin up the development environment workspace server:
 ```bash
 npm run dev
 ```
+
+*💡 Note: The background service worker layer remains disabled during local dev compilation to avoid servicing stale UI code while you make styling updates.
+
+
