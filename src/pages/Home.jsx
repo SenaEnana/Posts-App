@@ -6,8 +6,7 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
-      
-      {/* Dedicated Page Header Element (Fixes layout overlapping) */}
+
       <header className="w-full bg-white border-b border-slate-200 sticky top-0 z-40 px-4 py-3 sm:px-6 shadow-xs">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 no-underline">
@@ -32,11 +31,9 @@ function Home() {
         </div>
       </header>
 
-      {/* Main Viewport Workspace Container */}
       <main className="flex-1 flex items-center justify-center p-4">
         <div className="w-full max-w-2xl py-12 px-6 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
-          
-          {/* Animated App Brand Icon */}
+
           <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-inner animate-bounce">
             📮
           </div>
@@ -48,8 +45,7 @@ function Home() {
           <p className="text-slate-500 max-w-md mx-auto mb-8 text-base sm:text-lg">
             Your personal Progressive Web App dashboard to create, read, and manage thoughts seamlessly, even offline.
           </p>
-          
-          {/* Responsive Primary Routing CTA Block */}
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <button
               className="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all active:scale-95"
