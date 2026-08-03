@@ -10,22 +10,22 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'maskable-icon.png'],
-      // Workbox configurations handles your background data strategies
+
       workbox: {
         runtimeCaching: [
           {
-            // Intercept any fetch request going to JSONPlaceholder
+
             urlPattern: /^https:\/\/jsonplaceholder\.typicode\.com\/posts.*/,
-            // NetworkFirst means: try the internet first. If internet fails, use cache!
+
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-posts-cache',
               expiration: {
                 maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 * 7, // Keep cached posts secure for 7 days
+                maxAgeSeconds: 60 * 60 * 24 * 7, 
               },
               cacheableResponse: {
-                statuses: [0, 200], // Only cache valid successful network returns
+                statuses: [0, 200], 
               },
             },
           },
@@ -35,7 +35,7 @@ export default defineConfig({
         name: 'Post Application',
         short_name: 'PostApp',
         description: 'A Progressive Web Application for managing posts securely.',
-        theme_color: '#4f46e5', // Beautiful Indigo theme matching your UI
+        theme_color: '#4f46e5', 
         background_color: '#f8fafc',
         display: 'standalone',
         orientation: 'portrait',
