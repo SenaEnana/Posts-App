@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import NavbarLayout from "../components/NavbarLayout";
 
 const PostDetail = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
+  const [isDeleting, setIsDeleting] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,10 +15,13 @@ const PostDetail = () => {
       .catch((error) => console.error("Error fetching post details:", error));
   }, [id]);
 
-  async function deleteOperation(Id) {
+  async function deleteOperation(postId) {
+    if (!window.confirm("Are you sure you want to delete this post?")) return;
+    
+    setIsDeleting(true);
     try {
       const response = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${Id}`,
+        `https://jsonplaceholder.typicode.com/posts/${postId}`,
         {
           method: "DELETE",
           headers: {
@@ -27,69 +31,96 @@ const PostDetail = () => {
         }
       );
 
-      const result = await response.json();
-      console.log(result);
-
+      // jsonplaceholder's DELETE response doesn't always contain rich JSON back
       if (response.ok) {
         alert("Post deleted successfully");
         navigate("/getPosts");
       } else {
         console.log("Failed to delete post");
+        setIsDeleting(false);
       }
     } catch (error) {
       console.error("Error deleting post:", error.message);
+      setIsDeleting(false);
     }
   }
 
+  // Elegant Loading Skeleton State styled with Tailwind
   if (!post) {
     return (
-      <div>
-        <h4 className="fw-bold p-2 m-3">Loading...</h4>
-      </div>
+      <NavbarLayout>
+        <div className="max-w-2xl mx-auto mt-6 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-4 animate-pulse">
+          <div className="h-4 bg-slate-200 rounded w-1/4"></div>
+          <div className="h-8 bg-slate-200 rounded w-3/4"></div>
+          <div className="space-y-2 pt-4">
+            <div className="h-4 bg-slate-200 rounded w-full"></div>
+            <div className="h-4 bg-slate-200 rounded w-5/6"></div>
+          </div>
+        </div>
+      </NavbarLayout>
     );
   }
+
   return (
-    <>
-      <div className="card m-3 w-50 shadow-lg">
-      <p className="text-dark m-3 fs-5 fw-bold">Post Detail</p>
-        <div className="card-header">
-          <h5 className="text-center uppercase">{post.title}</h5>
-        </div>
-        <div className="card-body">
-          <div className="row">
-            <div className="col-md-6">
-              <p>
-                <strong>Post Id :</strong> {post.id}
-              </p>
-              <p>
-                <strong>User :</strong> {post.userId}
-              </p>
-              <p>
-                <strong>Body :</strong> {post.body}
-              </p>
+    <NavbarLayout>
+      <div className="max-w-2xl mx-auto mt-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden relative">
+          
+          {/* Top Indicator Accent Gradient line */}
+          <div className="h-2 w-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
+          
+          <div className="p-6 sm:p-8">
+            {/* Metadata Header Row */}
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg">
+                  ID: #{post.id}
+                </span>
+                <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">
+                  👤 Author {post.userId}
+                </span>
+              </div>
+              
+              <button
+                onClick={() => navigate("/getPosts")}
+                className="text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors"
+              >
+                ← Back to Feed
+              </button>
             </div>
-          </div>
-          <div className="float-end">
-            <button
-              onClick={() => deleteOperation(post.id)}
-              className="btn btn-outline-danger float end m-2 p-1 btn-sm"
-              type="button"
-            >
-              Delete
-            </button>
-            <Link to={`/updatePost/${post.id}`}>
-              <button className="btn btn-outline-info btn-sm">Edit</button>
-            </Link>
-            <button
-              className="btn btn-primary m-1 p-1 btn-sm"
-              onClick={() => navigate("/getPosts")}
-            >
-              Back
-            </button>
+
+            {/* Post Title */}
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capitalize mb-6">
+              {post.title}
+            </h1>
+
+            {/* Post Body text */}
+            <div className="text-slate-600 text-base sm:text-lg leading-relaxed border-t border-b border-slate-100 py-6 my-6">
+              {post.body || "No text description provided for this specific article payload."}
+            </div>
+
+            {/* Action Bar */}
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                disabled={isDeleting}
+                onClick={() => deleteOperation(post.id)}
+                className="px-4 py-2 text-sm font-semibold text-red-600 hover:bg-red-50 rounded-xl transition-all disabled:opacity-50"
+              >
+                {isDeleting ? "Deleting..." : "Delete Post"}
+              </button>
+              
+              <Link to={`/updatePost/${post.id}`}>
+                <button className="px-4 py-2 rounded-xl border border-cyan-200 bg-cyan-50 text-sm font-semibold text-cyan-700 hover:bg-cyan-100 transition-all">
+                  Edit Content
+                </button>
+              </Link>
+            </div>
+
           </div>
         </div>
       </div>
-    </>
+    </NavbarLayout>
   );
 };
+
 export default PostDetail;
