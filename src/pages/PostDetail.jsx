@@ -67,7 +67,7 @@ const PostDetail = () => {
           <div className="h-2 w-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
           
           <div className="p-6 sm:p-8">
-            {/* Metadata Header Row */}
+
             <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg">
@@ -86,17 +86,14 @@ const PostDetail = () => {
               </button>
             </div>
 
-            {/* Post Title */}
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capitalize mb-6">
               {post.title}
             </h1>
 
-            {/* Post Body text */}
             <div className="text-slate-600 text-base sm:text-lg leading-relaxed border-t border-b border-slate-100 py-6 my-6">
               {post.body || "No text description provided for this specific article payload."}
             </div>
 
-            {/* Action Bar */}
             <div className="flex items-center justify-end gap-3 pt-2">
               <button
                 disabled={isDeleting}
