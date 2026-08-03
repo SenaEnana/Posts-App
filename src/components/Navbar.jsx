@@ -8,7 +8,6 @@ function Navbar({ children }) {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col pb-16 md:pb-0">
-      {/* Top Navbar - Desktop & Tablet */}
       <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
           <Link to="/" className="text-xl font-bold tracking-tight text-indigo-600">
@@ -37,7 +36,7 @@ function Navbar({ children }) {
         {children}
       </main>
 
-      {/* Bottom Navigation Bar - Mobile PWA Feel */}
+
       <nav className="fixed bottom-0 left-0 z-40 h-16 w-full border-t border-slate-200 bg-white md:hidden flex items-center justify-around px-6 shadow-lg">
         <Link 
           to="/" 
