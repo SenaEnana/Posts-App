@@ -119,7 +119,6 @@ function UpdatePost() {
                     onChange={formikValues.handleChange}
                   />
 
-                  {/* Form Action Section Buttons */}
                   <div className="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
                     <button
                       type="button"
