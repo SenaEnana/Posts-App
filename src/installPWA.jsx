@@ -5,9 +5,8 @@ const InstallPWA = () => {
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event) => {
-      // Prevent standard browser banner from showing up automatically
       event.preventDefault();
-      // Save the event payload so we can trigger it manually later
+
       setInstallPrompt(event);
     };
 
