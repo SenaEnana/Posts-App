@@ -7,7 +7,6 @@ function Home() {
   return (
     <Navbar>
       <div className="flex flex-col items-center justify-center text-center py-12 px-4 rounded-2xl bg-white border border-slate-200 shadow-sm max-w-2xl mx-auto mt-6">
-        {/* Decorative App Icon Placeholder */}
         <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner animate-bounce">
           📮
         </div>
