@@ -43,7 +43,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
 
 1. Clone the project repository code:
    ```bash
-   git clone [https://github.com/SenaEnana/Posts-App.git](https://github.com/SenaEnana/Posts-App.git)
+   git clone [https://github.com/SenaEnana/PostSpace-App.git](https://github.com/SenaEnana/PostSpace-App.git)
    cd postspace
    ```
 2. Install the production and design dependencies:
