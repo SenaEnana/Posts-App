@@ -27,7 +27,7 @@ function PostCard({ post, index }) {
       <div className="pl-2 pt-3 border-t border-slate-100 flex items-center justify-end">
         <Link 
           to={`/postDetail/${post.id}`}
-          className="inline-flex items-center gap-1 text-sm font-semibold text-indigo-600 hover:text-cyan-600 transition-colors group/btn"
+          className="inline-flex items-center gap-1 text-sm font-semibold text-cyan-600 hover:text-cyan-600 transition-colors group/btn"
         >
           Read Details 
           <span className="transform group-hover/btn:translate-x-0.5 transition-transform">→</span>

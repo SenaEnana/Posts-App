@@ -8,7 +8,6 @@ function GetPosts({ posts }) {
   return (
     <Navbar>
       <div className="space-y-6">
-        {/* Header Section */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-slate-200 pb-5">
           <div>
             <h1 className="text-2xl font-extrabold tracking-tight text-slate-950">
@@ -26,16 +25,15 @@ function GetPosts({ posts }) {
             >
               Back Home
             </button>
-            <button
+            {/* <button
               onClick={() => navigate("/createPosts")}
               className="px-4 py-2 rounded-xl bg-indigo-600 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-colors flex items-center gap-1.5"
             >
               <span>➕</span> New Post
-            </button>
+            </button> */}
           </div>
         </div>
 
-        {/* Empty State Fallback */}
         {posts.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 p-8 max-w-md mx-auto mt-6">
             <span className="text-4xl block mb-3">📭</span>
@@ -51,7 +49,7 @@ function GetPosts({ posts }) {
             </button>
           </div>
         ) : (
-          /* Responsive Card Grid: 1 column on mobile, 2 columns on tablet/desktop */
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {posts.map((post, index) => (
               <PostCard key={post.id} post={post} index={index + 1} />
