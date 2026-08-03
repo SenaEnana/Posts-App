@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import NavbarLayout from "../components/NavbarLayout";
+import Navbar from "../components/Navbar";
 
 const PostDetail = () => {
   const { id } = useParams();
@@ -46,7 +46,7 @@ const PostDetail = () => {
 
   if (!post) {
     return (
-      <NavbarLayout>
+      <Navbar>
         <div className="max-w-2xl mx-auto mt-6 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-4 animate-pulse">
           <div className="h-4 bg-slate-200 rounded w-1/4"></div>
           <div className="h-8 bg-slate-200 rounded w-3/4"></div>
@@ -55,12 +55,12 @@ const PostDetail = () => {
             <div className="h-4 bg-slate-200 rounded w-5/6"></div>
           </div>
         </div>
-      </NavbarLayout>
+      </Navbar>
     );
   }
 
   return (
-    <NavbarLayout>
+    <Navbar>
       <div className="max-w-2xl mx-auto mt-6">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden relative">
           
@@ -113,7 +113,7 @@ const PostDetail = () => {
           </div>
         </div>
       </div>
-    </NavbarLayout>
+    </Navbar>
   );
 };
 
