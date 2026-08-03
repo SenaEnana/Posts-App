@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Formik } from "formik";
 import TextInput from "../components/TextInput";
-import NavbarLayout from "../components/NavbarLayout";
+import Navbar from "../components/Navbar";
 
 function UpdatePost() {
   let { id } = useParams();
@@ -58,7 +58,7 @@ function UpdatePost() {
   }
 
   return (
-    <NavbarLayout>
+    <Navbar>
       <div className="max-w-xl mx-auto mt-4">
         
         {/* Loading State Skeleton */}
@@ -146,7 +146,7 @@ function UpdatePost() {
         )}
 
       </div>
-    </NavbarLayout>
+    </Navbar>
   );
 }
 
