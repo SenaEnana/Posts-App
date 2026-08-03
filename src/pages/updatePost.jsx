@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Formik } from "formik";
-import TextInput from "../components/textInput";
+import TextInput from "../components/TextInput";
 
 function UpdatePost() {
   let { id } = useParams();
