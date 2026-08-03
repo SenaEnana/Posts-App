@@ -60,8 +60,7 @@ function UpdatePost() {
   return (
     <Navbar>
       <div className="max-w-xl mx-auto mt-4">
-        
-        {/* Loading State Skeleton */}
+
         {(!data || loading) && (
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-5 animate-pulse">
             <div className="h-6 bg-slate-200 rounded w-1/3 mx-auto"></div>
