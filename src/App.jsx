@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   const addNewPost = (post) => {
-    setPosts((prevPosts) => [post, ...prevPosts]); // Puts new posts at the top of the feed
+    setPosts((prevPosts) => [post, ...prevPosts]); 
   };
 
   const deletePost = (id) => {
@@ -60,7 +60,6 @@ function App() {
         <Route path="/createPosts" element={<CreatePosts addNewPost={addNewPost} />} />
         <Route path="/getPosts" element={<GetPosts posts={posts} />} />
         
-        {/* Pass state control handlers down so details and update screens work natively */}
         <Route path="/postDetail/:id" element={<PostDetail deletePost={deletePost} />} />
         <Route path="/updatePost/:id" element={<UpdatePost updatePost={updatePost} />} />
       </Routes>
