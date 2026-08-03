@@ -23,11 +23,10 @@ const InstallPWA = () => {
 
     installPrompt.prompt();
 
-    // Wait for the user to make a choice (Accept or Dismiss)
     const choiceResult = await installPrompt.userChoice;
     if (choiceResult.outcome === "accepted") {
       console.log("User accepted the installation prompt!");
-      setInstallPrompt(null); // Clear prompt if successful
+      setInstallPrompt(null);
     }
   };
 
