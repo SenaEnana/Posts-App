@@ -1,8 +1,8 @@
 import { postsValidation } from "./schema";
 import { Formik } from "formik";
 import { useNavigate } from "react-router-dom";
-import TextInput from "../../components/textInput";
-import NavbarLayout from "../components/NavbarLayout";
+import TextInput from "../components/TextInput";
+import Navbar from "../components/Navbar";
 
 function CreatePosts({ addNewPost }) {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ function CreatePosts({ addNewPost }) {
   }
 
   return (
-    <NavbarLayout>
+    <Navbar>
       <div className="max-w-xl mx-auto mt-4">
         {/* Card Container */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
@@ -127,7 +127,7 @@ function CreatePosts({ addNewPost }) {
           </Formik>
         </div>
       </div>
-    </NavbarLayout>
+    </Navbar>
   );
 }
 
