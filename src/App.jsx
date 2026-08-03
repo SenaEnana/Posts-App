@@ -1,7 +1,7 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import CreatePosts from './pages/CreatePost';
-import GetPosts from './pages/getPosts';
+import GetPosts from './pages/GetPosts';
 import PostDetail from './pages/postDetail';
 import UpdatePost from './pages/updatePost';
 import { useState, useEffect } from 'react';
