@@ -10,20 +10,20 @@ function Navbar({ children }) {
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col pb-16 md:pb-0">
       <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
-          <Link to="/" className="text-xl font-bold tracking-tight text-indigo-600">
-            PostSpace<span className="text-xs font-semibold ml-1 px-1.5 py-0.5 bg-indigo-50 text-indigo-700 rounded-full">PWA</span>
+          <Link to="/" className="text-xl font-bold tracking-tight text-cyan-600">
+            PostSpace<span className="text-xs font-semibold ml-1 px-1.5 py-0.5 bg-cyan-50 text-cyan-700 rounded-full">PWA</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6">
             <Link 
               to="/getPosts" 
-              className={`text-sm font-medium transition-colors ${isActive('/getPosts') ? 'text-indigo-600' : 'text-slate-600 hover:text-slate-900'}`}
+              className={`text-sm font-medium transition-colors ${isActive('/getPosts') ? 'text-cyan-600' : 'text-slate-600 hover:text-slate-900'}`}
             >
               View Posts
             </Link>
             <button
               onClick={() => navigate("/createPosts")}
-              className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all"
+              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 transition-all"
             >
               Create Post
             </button>
@@ -31,7 +31,6 @@ function Navbar({ children }) {
         </div>
       </header>
 
-      {/* Main Content Area */}
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
         {children}
       </main>
