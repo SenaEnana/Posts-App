@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-tailwindcss' // or '@vitejs/plugin-react' depending on your setup
+import react from '@vitejs/plugin-react';
+// import react from '@vitejs/react-tailwindcss' // or '@vitejs/plugin-react' depending on your setup
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 

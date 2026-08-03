@@ -5,7 +5,7 @@ import GetPosts from './pages/getPosts';
 import PostDetail from './pages/postDetail';
 import UpdatePost from './pages/updatePost';
 import { useState, useEffect } from 'react';
-import Home from './pages/home';
+import Home from './pages/Home';
 import InstallPWA from './installPWA';
 
 function App() {
