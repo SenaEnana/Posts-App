@@ -64,7 +64,6 @@ const PostDetail = () => {
       <div className="max-w-2xl mx-auto mt-6">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden relative">
           
-          {/* Top Indicator Accent Gradient line */}
           <div className="h-2 w-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
           
           <div className="p-6 sm:p-8">
