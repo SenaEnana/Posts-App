@@ -31,7 +31,6 @@ const PostDetail = () => {
         }
       );
 
-      // jsonplaceholder's DELETE response doesn't always contain rich JSON back
       if (response.ok) {
         alert("Post deleted successfully");
         navigate("/getPosts");
