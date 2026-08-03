@@ -13,7 +13,7 @@ const InstallPWA = () => {
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
     return () => {
-      // Correctly remove the exact named listener reference
+
       window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     };
   }, []);
@@ -21,7 +21,6 @@ const InstallPWA = () => {
   const handleInstallClick = async () => {
     if (!installPrompt) return;
 
-    // Trigger the native installation prompt window
     installPrompt.prompt();
 
     // Wait for the user to make a choice (Accept or Dismiss)
