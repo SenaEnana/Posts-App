@@ -39,21 +39,21 @@ function Navbar({ children }) {
       <nav className="fixed bottom-0 left-0 z-40 h-16 w-full border-t border-slate-200 bg-white md:hidden flex items-center justify-around px-6 shadow-lg">
         <Link 
           to="/" 
-          className={`flex flex-col items-center justify-center text-xs gap-0.5 ${isActive('/') ? 'text-indigo-600 font-semibold' : 'text-slate-500'}`}
+          className={`flex flex-col items-center justify-center text-xs gap-0.5 ${isActive('/') ? 'text-cyan-600 font-semibold' : 'text-slate-500'}`}
         >
           <span className="text-lg">🏠</span>
           Home
         </Link>
         <Link 
           to="/getPosts" 
-          className={`flex flex-col items-center justify-center text-xs gap-0.5 ${isActive('/getPosts') ? 'text-indigo-600 font-semibold' : 'text-slate-500'}`}
+          className={`flex flex-col items-center justify-center text-xs gap-0.5 ${isActive('/getPosts') ? 'text-cyan-600 font-semibold' : 'text-slate-500'}`}
         >
           <span className="text-lg">📄</span>
           Feed
         </Link>
         <Link 
           to="/createPosts" 
-          className={`flex flex-col items-center justify-center text-xs gap-0.5 ${isActive('/createPosts') ? 'text-indigo-600 font-semibold' : 'text-slate-500'}`}
+          className={`flex flex-col items-center justify-center text-xs gap-0.5 ${isActive('/createPosts') ? 'text-cyan-600 font-semibold' : 'text-slate-500'}`}
         >
           <span className="text-lg">➕</span>
           Create
