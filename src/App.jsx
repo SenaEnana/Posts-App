@@ -1,9 +1,9 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import CreatePosts from './pages/CreatePost';
-import GetPosts from './pages/getPosts';
-import PostDetail from './pages/postDetail';
-import UpdatePost from './pages/updatePost';
+import GetPosts from './pages/GetPosts';
+import PostDetail from './pages/PostDetail';
+import UpdatePost from './pages/UpdatePost';
 import { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import InstallPWA from './installPWA';
@@ -69,51 +69,3 @@ function App() {
 }
 
 export default App
-
-
-// ///for the offline to apply the offline work
-// //import React, { useEffect, useState } from 'react';
-// import ReactDOM from 'react-dom';
-
-// function App() {
-//   const [posts, setPosts] = useState([]);
-//   const [isOffline, setIsOffline] = useState(!navigator.onLine);
-
-//   useEffect(() => {
-//     const fetchPosts = async () => {
-//       try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-//         const data = await response.json();
-//         setPosts(data);
-//       } catch (error) {
-//         console.error('Error fetching posts:', error);
-//       }
-//     };
-
-//     fetchPosts();
-
-//     const handleOnline = () => setIsOffline(false);
-//     const handleOffline = () => setIsOffline(true);
-
-//     window.addEventListener('online', handleOnline);
-//     window.addEventListener('offline', handleOffline);
-
-//     return () => {
-//       window.removeEventListener('online', handleOnline);
-//       window.removeEventListener('offline', handleOffline);
-//     };
-//   }, []);
-
-//   return (
-//     <div>
-//       {isOffline && <p>You are offline. Some features may not be available.</p>}
-//       <ul>
-//         {posts.map(post => (
-//           <li key={post.id}>{post.title}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// ReactDOM.render(<App />, document.getElementById('root'));
