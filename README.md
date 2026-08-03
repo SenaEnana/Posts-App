@@ -4,6 +4,14 @@ PostSpace is a modern, high-performance Progressive Web Application (PWA) design
 
 ---
 
+## 🎯 Project Goals
+
+*   **Master Progressive Web App Architecture:** Gain deep, hands-on experience with modern PWA capabilities, including service workers, runtime caching strategies, dynamic install lifecycles, and application manifests.
+*   **Create a Reusable PWA Blueprint:** Build a clean, modular, and production-ready skeleton codebase that can be easily repurposed for future offline-first React applications.
+*   **Implement Secure Offline Capabilities:** Move away from standard, high-risk client-side caching habits and master safe, sandboxed background interception via Workbox.
+*   **Modern Styling Infrastructure:** Practice setting up fluid, native-feeling mobile components using Tailwind CSS v4's high-performance compilation engine.
+---
+
 ## ✨ Features
 
 *   **📱 Pure PWA Experience:** Fully downloadable and installable to your mobile home screen or desktop via an intuitive, custom in-app banner.
@@ -37,7 +45,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your local machine.
    ```bash
    git clone [https://github.com/SenaEnana/Posts-App.git](https://github.com/SenaEnana/Posts-App.git)
    cd postspace
-```
+   ```
 2. Install the production and design dependencies:
 ```bash
 npm install
@@ -59,7 +67,7 @@ To spin up the development environment workspace server:
 npm run dev
 ```
 
-*💡 Note: The background service worker layer remains disabled during local dev compilation to avoid servicing stale UI code while you make styling updates.
+💡 Note: The background service worker layer remains disabled during local dev compilation to avoid servicing stale UI code while you make styling updates.
 
 ## Simulating the full PWA Capabilities (Production Preview)
  
@@ -112,3 +120,12 @@ Open the provided local staging server link (typically http://localhost:4173) in
 ```
 * Behavior: The Service Worker dynamically hooks fetch calls. If internet access is drops out unexpectedly, the background service worker securely intercepts the network failure and immediately populates the React application engine using local sandboxed CacheStorage copies.
 
+---
+
+## 👨‍💻 Author
+
+Sena Adane
+
+Software Application Developer
+
+---
