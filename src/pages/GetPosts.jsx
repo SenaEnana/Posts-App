@@ -1,119 +1,65 @@
-// import { useState, useEffect } from "react";
-// import { NavLink, Link } from "react-router-dom";
-
-// function GetPosts({ newPosts }) {
-//   const [data, setData] = useState([]);
-//   // const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     getData();
-//   }, []);
-
-//   async function getData() {
-//     let result = await fetch('https://jsonplaceholder.typicode.com/posts');
-//     result = await result.json();
-//     setData(result);
-//     // setLoading(false);
-//   }
-
-//   const combinedPosts = [...newPosts, ...data];
-
-//   // if (loading) {
-//   //   return <div className="m-5"><h5 className="text-bold p-4">Loading...</h5></div>;
-//   // }
-
-//   return (
-//     <>
-//         <div className="justify-content-center m-4">
-//         <h5 className="m-2 text-center">List Of Posts</h5></div>
-//         <div className="d-flex m-2 float-end">
-//         <NavLink
-//           to={"/createPosts"}
-//           className="btn btn-secondary btn-sm m-2"
-//         >
-//           Create new post
-//         </NavLink>
-//       </div>
-//       <div className="d-flex justify-content-center mt-1 text-dark">
-//       <table className="table table-hover border text-dark w-100 m-5 fs-6">
-//         <thead>
-//           <tr>
-//            <th>No</th>
-//             <th>Title</th>
-//             <th>User</th>
-//             <th>Action</th>
-//           </tr>
-//         </thead>
-
-//         <tbody>
-//           {combinedPosts.map((posts) => (
-//             <tr key={posts.id}>
-//               <td>{posts.id}</td>
-//               <td>{posts.title}</td>
-//               <td>{posts.userId}</td>
-//               <td>
-//                 <Link to={`/postDetail/${posts.id}`}>
-//                   <button className="btn btn-outline-info btn-sm">
-//                     Detail
-//                   </button>
-//                 </Link>
-//               </td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default GetPosts;
-
-import { NavLink, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import PostCard from "../components/PostCard";
 
 function GetPosts({ posts }) {
+  const navigate = useNavigate();
+
   return (
-    <>
-      <div className="justify-content-center m-2">
-        <h4 className="m-2 text-center">This is List Of All Posts</h4>
-      </div>
-      <div className="d-flex m-2 float-end">
-        <NavLink to={"/createPosts"} className="btn btn-secondary btn-sm m-2">
-          Create new post
-        </NavLink>
-        <NavLink to={"/"} className="btn btn-primary btn-sm m-2">
-          Back
-        </NavLink>
-      </div>
-      <div className="d-flex justify-content-center mt-1 text-dark">
-        <table className="table table-hover border text-dark w-100 m-5 fs-6">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Title</th>
-              <th>User</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {posts.map((post) => (
-              <tr key={post.id}>
-                <td>{post.id}</td>
-                <td>{post.title}</td>
-                <td>{post.userId}</td>
-                <td>
-                  <Link to={`/postDetail/${post.id}`}>
-                    <button className="btn btn-outline-info btn-sm">
-                      Detail
-                    </button>
-                  </Link>
-                </td>
-              </tr>
+    <Navbar>
+      <div className="space-y-6">
+        {/* Header Section */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-slate-200 pb-5">
+          <div>
+            <h1 className="text-2xl font-extrabold tracking-tight text-slate-950">
+              Community Feed
+            </h1>
+            <p className="text-sm text-slate-500 mt-1">
+              Explore recent articles, updates, and user stories.
+            </p>
+          </div>
+          
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => navigate("/")}
+              className="px-4 py-2 rounded-xl border border-slate-200 text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors"
+            >
+              Back Home
+            </button>
+            <button
+              onClick={() => navigate("/createPosts")}
+              className="px-4 py-2 rounded-xl bg-indigo-600 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-colors flex items-center gap-1.5"
+            >
+              <span>➕</span> New Post
+            </button>
+          </div>
+        </div>
+
+        {/* Empty State Fallback */}
+        {posts.length === 0 ? (
+          <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 p-8 max-w-md mx-auto mt-6">
+            <span className="text-4xl block mb-3">📭</span>
+            <h3 className="text-lg font-bold text-slate-950">No posts available</h3>
+            <p className="text-sm text-slate-500 mt-1 mb-6">
+              Be the first to share an update with the local app community.
+            </p>
+            <button
+              onClick={() => navigate("/createPosts")}
+              className="px-4 py-2 rounded-xl bg-cyan-600 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 transition-colors"
+            >
+              Create a Post
+            </button>
+          </div>
+        ) : (
+          /* Responsive Card Grid: 1 column on mobile, 2 columns on tablet/desktop */
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {posts.map((post, index) => (
+              <PostCard key={post.id} post={post} index={index + 1} />
             ))}
-          </tbody>
-        </table>
+          </div>
+        )}
       </div>
-    </>
+    </Navbar>
   );
 }
 
