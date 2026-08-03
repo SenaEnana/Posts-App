@@ -11,7 +11,7 @@ function Home() {
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 no-underline">
             <span className="text-xl">📮</span>
-            <span className="text-base font-bold tracking-tight text-indigo-600">PostSpace</span>
+            <span className="text-base font-bold tracking-tight text-cyan-600">PostSpace</span>
           </Link>
           
           <nav className="flex items-center gap-4">
@@ -23,7 +23,7 @@ function Home() {
             </Link>
             <Link 
               to="/createPosts" 
-              className="px-3.5 py-1.5 rounded-lg bg-indigo-50 text-xs font-semibold text-indigo-600 hover:bg-indigo-100 transition-all no-underline"
+              className="px-3.5 py-1.5 rounded-lg bg-cyan-50 text-xs font-semibold text-cyan-600 hover:bg-cyan-100 transition-all no-underline"
             >
               + New Post
             </Link>
@@ -48,7 +48,7 @@ function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <button
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all active:scale-95"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-cyan-600 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 transition-all active:scale-95"
               onClick={() => navigate("/createPosts")}
             >
               Create a Post
