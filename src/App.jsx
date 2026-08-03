@@ -27,7 +27,6 @@ function App() {
     fetchData();
   }, []);
 
-  // 2. State modifiers that pass updates cleanly to all child components
   const addNewPost = (post) => {
     setPosts((prevPosts) => [post, ...prevPosts]); // Puts new posts at the top of the feed
   };
