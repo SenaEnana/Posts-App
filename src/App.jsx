@@ -1,4 +1,3 @@
-import './App.css'
 import { Routes, Route } from "react-router-dom";
 import CreatePosts from './pages/CreatePost';
 import GetPosts from './pages/GetPosts';
@@ -12,7 +11,6 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 1. Fetch original posts from Mock API
   useEffect(() => {
     const fetchData = async () => {
       try {
