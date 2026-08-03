@@ -12,8 +12,7 @@ function CreatePosts({ addNewPost }) {
       id: Date.now(),
       ...values,
     };
-    
-    // Optimistically update local PWA state so it works fast / offline
+
     addNewPost(newPost);
 
     try {
@@ -31,7 +30,6 @@ function CreatePosts({ addNewPost }) {
       console.log(json);
 
       if (response.ok) {
-        // A modern approach could replace alert() with a toast, but keeping the navigation flow intact
         alert("Post created successfully");
         navigate("/getPosts");
       } else {
@@ -69,7 +67,6 @@ function CreatePosts({ addNewPost }) {
                 onSubmit={formikValues.handleSubmit}
                 className="p-6 space-y-5"
               >
-                {/* Note: Ensure TextInput accepts Tailwind classes or uses native styling inside */}
                 <div className="space-y-1">
                   <TextInput
                     type="text"
