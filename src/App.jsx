@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import CreatePosts from './pages/CreatePost';
 import GetPosts from './pages/GetPosts';
 import PostDetail from './pages/PostDetail';
-import UpdatePost from './pages/updatePost';
+import UpdatePost from './pages/UpdatePost';
 import { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import InstallPWA from './installPWA';
