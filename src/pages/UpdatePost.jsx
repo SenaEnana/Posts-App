@@ -70,10 +70,8 @@ function UpdatePost() {
           </div>
         )}
 
-        {/* Form Container */}
         {data && !loading && (
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-            {/* Cyan/Indigo Header Block */}
             <div className="bg-slate-50 border-b border-slate-100 px-6 py-4 text-center">
               <h2 className="text-xl font-bold text-slate-900">Edit Post Details</h2>
               <p className="text-xs text-slate-500 mt-0.5">Modifying Entry Record #{id}</p>
