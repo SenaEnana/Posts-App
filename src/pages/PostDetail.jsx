@@ -44,7 +44,6 @@ const PostDetail = () => {
     }
   }
 
-  // Elegant Loading Skeleton State styled with Tailwind
   if (!post) {
     return (
       <NavbarLayout>
