@@ -17,13 +17,13 @@ Experience the live application deployed on Vercel:
 
 ## 📸 Screenshots & Preview
 
-| Home Feed View | Create Post Form |
+| Home Page View | Create Post Form |
 | :---: | :---: |
-| ![Home View Screenshot]![alt text](post-space-one.vercel.app_.png) | ![Create Post Screenshot]![alt text](post-space-one.vercel.app_-1.png) |
+| ![alt text](post-space-one.vercel.app_.png) | ![alt text](createPosts.png) |
 
-| PWA Install Banner | Mobile View |
+| Post View Banner | Detail View |
 | :---: | :---: |
-| ![PWA Prompt Screenshot]![alt text](post-space-one.vercel.app_-2.png) | ![Mobile View Screenshot] ![alt text](post-space-one.vercel.app_-3.png) |
+| ![alt text](view-feed.png) | ![alt text](_postDetail_2.png) |
 
 ---
 
