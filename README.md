@@ -23,7 +23,7 @@ Experience the live application deployed on Vercel:
 
 | PWA Install Banner | Mobile View |
 | :---: | :---: |
-| ![PWA Prompt Screenshot]![alt text](post-space-one.vercel.app_-2.png)(https://via.placeholder.com/600x350?text=PWA+Install+Prompt+Screenshot) | ![Mobile View Screenshot](https://via.placeholder.com/600x350?text=Mobile+Responsive+Screenshot) |
+| ![PWA Prompt Screenshot]![alt text](post-space-one.vercel.app_-2.png) | ![Mobile View Screenshot] ![alt text](post-space-one.vercel.app_-3.png) |
 
 ---
 
