@@ -15,7 +15,17 @@ Experience the live application deployed on Vercel:
 
 ---
 
+## 📸 Screenshots & Preview
 
+| Home Feed View | Create Post Form |
+| :---: | :---: |
+| ![Home View Screenshot](https://via.placeholder.com/600x350?text=Home+Feed+View+Screenshot) | ![Create Post Screenshot](https://via.placeholder.com/600x350?text=Create+Post+Form+Screenshot) |
+
+| PWA Install Banner | Mobile View |
+| :---: | :---: |
+| ![PWA Prompt Screenshot](https://via.placeholder.com/600x350?text=PWA+Install+Prompt+Screenshot) | ![Mobile View Screenshot](https://via.placeholder.com/600x350?text=Mobile+Responsive+Screenshot) |
+
+---
 
 ## 🎯 Project Goals
 
