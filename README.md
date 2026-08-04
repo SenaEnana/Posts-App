@@ -2,6 +2,29 @@
 
 PostSpace is a modern, high-performance Progressive Web Application (PWA) designed for seamless post management. Built with React, Vite, and Tailwind CSS v4, it features comprehensive offline support using advanced Service Worker caching strategies rather than vulnerable client-side storage mechanisms.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://post-space-one.vercel.app)
+
+---
+
+## 🌐 Live Demo
+
+Experience the live application deployed on Vercel:
+👉 **[post-space-one.vercel.app](https://post-space-one.vercel.app)**
+
+> 💡 **Tip:** Open the link on a mobile device or desktop browser (like Chrome/Edge) to test the native PWA install prompt and offline capabilities!
+
+---
+
+## 📸 Screenshots & Preview
+
+| Home Feed View | Create Post Form |
+| :---: | :---: |
+| ![Home View Screenshot](https://via.placeholder.com/600x350?text=Home+Feed+View+Screenshot) | ![Create Post Screenshot](https://via.placeholder.com/600x350?text=Create+Post+Form+Screenshot) |
+
+| PWA Install Banner | Mobile View |
+| :---: | :---: |
+| ![PWA Prompt Screenshot](https://via.placeholder.com/600x350?text=PWA+Install+Prompt+Screenshot) | ![Mobile View Screenshot](https://via.placeholder.com/600x350?text=Mobile+Responsive+Screenshot) |
+
 ---
 
 ## 🎯 Project Goals
@@ -127,5 +150,7 @@ Open the provided local staging server link (typically http://localhost:4173) in
 Sena Adane
 
 Software Application Developer
+
+GitHub: @SenaEnana
 
 ---
