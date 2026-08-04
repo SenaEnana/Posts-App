@@ -21,9 +21,9 @@ Experience the live application deployed on Vercel:
 | :---: | :---: |
 | ![alt text](post-space-one.vercel.app_.png) | ![alt text](createPosts.png) |
 
-| PWA Install Banner
+| Post View Banner | Detail View |
 | :---: | :---: |
-| ![alt text](post-space-one.vercel.app_-2.png) | ![alt text](post-space-one.vercel.app_-3.png) |
+| ![alt text](view-feed.png) | ![alt text](post-space-one.vercel.app_-3.png) |
 
 ---
 
