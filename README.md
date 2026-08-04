@@ -23,7 +23,7 @@ Experience the live application deployed on Vercel:
 
 | Post View Banner | Detail View |
 | :---: | :---: |
-| ![alt text](view.png) | ![alt text](_postDetail_2.png) |
+| ![alt text](post-space-one.vercel.app_getPosts.png) | ![alt text](_postDetail_2.png) |
 
 ---
 
