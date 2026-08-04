@@ -19,7 +19,7 @@ Experience the live application deployed on Vercel:
 
 | Home Feed View | Create Post Form |
 | :---: | :---: |
-| ![Home View Screenshot]![alt text](post-space-one.vercel.app_.png) | ![Create Post Screenshot]![alt text](post-space-one.vercel.app_-1.png) |
+| ![alt text](post-space-one.vercel.app_.png) | ![Create Post Screenshot]![alt text](post-space-one.vercel.app_-1.png) |
 
 | PWA Install Banner | Mobile View |
 | :---: | :---: |
